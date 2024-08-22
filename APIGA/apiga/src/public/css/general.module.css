@@ -1,0 +1,112 @@
+:root{
+    --fundoCinza: #f2f2f2;
+    --branco: #fff;
+    --corAzulBotao: #032741;
+    --corAzulBotaoHover: #082a43;
+    --corBrancaLetras: #fff;
+    --corPretaLetras: #000;
+    --corrErro: #d76767;
+    --letraErro: #6e0404;
+    --corSucesso: #82d282;
+    --letraSucesso: #0a6b0a;
+}
+*{
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--fundoCinza);
+}
+
+header{
+    background-color: var(--branco);
+    border-top: .4em solid var(--corAzulBotao);
+    display: flex;
+    flex-direction: column;
+    /* align-items: end; */
+    padding: .5em 4em;
+    box-shadow: 0 -.7em 1em .1em #000;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    height: 5em;
+    align-items: end;
+
+}
+nav li{
+    list-style: none;
+}
+
+nav .user{
+    display: flex;
+    gap: .2em;
+}
+
+
+nav .menu{
+    display: flex;
+    gap: 2em;
+}
+
+a{
+    text-decoration: none;
+    color: var(--corAzulBotao);
+}
+
+.menu a:hover{
+    text-decoration: underline;
+}
+
+section{
+    display: flex;
+    padding: 4em 4em;
+}
+
+section .container{
+    /* display: flex; */
+    display: flex;
+    flex-direction: row;
+    gap: .5em;
+}
+.container .atividades{
+    width: 10em;
+    height: 100%;
+}
+
+.container .impressora{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 30em;
+}
+
+.impressora div{
+    width: 100%;
+}
+
+.container .design{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 30em;
+}
+section .container div{
+    gap: 2em;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 4em;
+    background-color: var(--branco);
+    border-top: .2em solid var(--corAzulBotao);
+}
+footer span{
+    color: var(--corAzulBotao);
+}

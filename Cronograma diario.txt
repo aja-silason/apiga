@@ -1,0 +1,119 @@
+Diario da rotina no programador
+
+Dia 23/01/2024
+
+* Comecei a elaborar o projecto de Gestão interna da AJA TFC - APIGA
+* Fiz a delimitação em um relatório
+* Criei o DDD do projecto
+* Fiz a modelagem do Banco de Dados do projecto no BrModel, gerando o modelo Conceitual
+* Fiz a modelagem do BD no DDesigner, Gerando o Modelo Lógico.
+* Concertei erros que haviam por causa das referenças de algumas chaves
+* Concertei o erro que havia nas relações entre tabelas.
+* Implentei o BD para o fisico(Xampp/phpmyadmin);
+ 
+Dia 24/01/2024
+
+* Implementei os modelos gerados no relatório e assim finalizando-o
+* Criei o projecto em duas secções diferentes
+* Uma para o ack end e a outra para o front end
+* Fiz a criação do projecto
+* Comecei por um modelo convencinal e habitual
+* Implementei rotas no projecto
+* Criei a rota de criar projecto
+
+Dia 25/01/2024
+
+* Tentei mudar de arquitetura do projecto do procedural para o MVC
+* Erros na arquitetura MVC
+* O controller não responde as minhas exigências
+* Optei por ficar apenas com o "Model"
+* Implementei a logica de pegar e inserir os dados pelo model, referenciar a rota em routes e chamar o mesmo lá no index
+* O metódo procedural está sendo muito repetitivo e os código meio que são iguais, em todos os verbos.
+* Criei mais rotas no projecto
+
+DIa 26/01/2024
+
+* Resolvi erros que eventualmente quebravam com a integridade da BD
+* O MVC  mostrou muito produtivo
+* Decidi implementar o trigger em meu BD mas decidi esperar para ocasiões futuras, não achei necesserário até ao momento. Claro que usarei em um futuro próximo.
+* Repetição escessiva de código
+* Tentei criar uma função que fizesse a exibição das respostas a cada query. Sem sucesso.
+* Continuei usando a repetição de códigos exautivamente.
+* Tentativa 2 de criar a função que apresentasse as respostas de cada query. Sem Sucesso.
+* Tentiva 3. Aqui ao invez de pegar apenas as respostas, peguei a conexão por inteiro.
+* Fiz o controlo com o tryCatch e funcionou.
+* Mas o problema era o verbo de cada requisição. Teria que criar mais uma funcao para outros verbos e depois chamar elas? Talvez! Se fossem diverso arquivos e eu referenciasse os mesmo respectivos arquivos.
+* Decidi usar estrutura de decisão/controle if e else.
+* Primeiro teria que saber se as query's funcionavam.
+* usei uma verificação se as linhas foram afectadas com a query no caso "results.affectedRows != 0". ele prosseguiria. Caso contrário sem registro.
+* Apos isso vez verificação do verbo no caso em cada classe criei a uma constante que recebia o verbo especifico da rota.
+* No caso na funcção criada teve que ter um dos argumentos o verbo.
+* Então a resposta variava de acordo o verbo vindo da classe.
+* De seguida o que fiz foi na classe requerir os params vindo do body e os id's quando necessário na rota.
+* Executei a query padrão do Sql, "select, update, delete e insert". cada comando influenciava directamente no verbo que seria adicionado como valor na função acima criada e abaixo referenciada.
+* E funcionou lindamente.
+
+Dia 27/01/2024
+
+* Continuando a reutilizaçã de código
+* Deparei com alguns problemas nas requisições e nas consulta
+* Resolvi o problema. As tabelas estavam em conflitos com as query's.
+* Usei uma variavel que recebia null e depois fazia a verificação no BD
+* Criei rotas especificas para apresentar diferente projectos armazenados na mesma tabela
+* Um projecto no caso seria solicitado pelo cliente e o outro inserido pelo usuario
+* Durante a apresentação ele apresentava todos os projecto não importando a rota que era requerida
+* Solucionei o problema com a ajuda de um dos atributos.
+* No caso o atributo nomoe_cliente era preenchido quendo o cliente pede um serviço/projecto.
+* Então usei isso ao meu favor
+* Pude verificar registros onde somente o nome do cliente estivesse preenchido .
+* E então com isso resolver o problema das consultas.
+
+Dia 28/01/2024
+
+* Erro tentando adicionar conteudo na rota user/cliente/projecto
+* Tentando adicionar e o erro é provavel que a query não passa pois ela retorn 'undefined'
+* Resolvi o problema. O mesmo estava em duas variaveis que vem do req.body.
+* Ao passarem pela query, faltava '' e uma }, { entre as duas variaveis que parecem visivelmente iguais.
+* Teste passou com sucesso.
+* Encontrei erro ao fazer o patch do novo serviço do projecto.
+* Erro solucionado, o código tinha um erro que passava despercebido, no casso ao pegar o id pela url ele não vinha pelo req.params.id, no caso adicionei o mesmo e o patch funcionou.
+* Adicionando a ultima rota do criar projecto do cliente.
+* A rota para delete do projecto-cliente implementada com sucesso. Facilitou por causa da reutilização do código e da função criada para todos.
+* Implementei uma requisição que perminte o usuario pegar registros pelo nome do cliente onde foi feita uma verificação de dados isso na quey usando o LIKE do sql.
+* Criar uma nova rota para adicionar os tipos de serviços
+* Adicionei as rotas para os quatros verbos.
+* Tentei implementar uma outra forma de fazer o controle das mensagens da query, com o switch case, não foi um sucesso. Continueir na mesma forma antiga com if e else.
+* Finalizando os verbos do Tipo de Servico.
+
+Dia 29/01/2024
+
+* Criei uma nova rota para os serviços
+* Adicionei a funcção para o controlo das query e os respectivos verbos.
+* Finalizndo a rota de Seevico sem problema.
+* Adicionando a rota de relatório e todos os seus verbos.
+* Ao implementar a rota de delete na query fiz o seguinte "DELETE FROM servico" ou seja eliminou todos os registros dos serviços que eu já havia criado :(.
+* Tive que repor o sql para "DELETE FROM servico WHERE idServico = '${id}'". e fez o que eu quiz que fizesse :D.
+*Implementando rotas de relatorios do projecto, criação do verbo do projecto.
+* Finalizei o dia com a rota do relatorio finalizada.
+
+Dia 02/02/2024
+
+* Adicionando triggers em tabelas do banco de dados.
+* Depois fiquei mal pelo jogo do CAN Angola x Nigeria = 0 - 1 :(.
+
+Dia 03/02/2024
+
+* Criando rota para o investimento, adicionando os verbos da mesma.
+* Adicionado as rotas para o pagamento de funcioanrios.
+* E finalizei a inserção de todas as rotas do sistema.
+* Agora o que resta é implementar o middlewares e token para restringir os niveis de acesso da aplicação.
+
+Dia 07/02/2024
+
+* Na view usei a autenticação para se ter um login cotrolado com sessões.
+
+Dia 12/02/2024
+
+* Criando a view do home e outras views.
+* Configurando as rotas de nivel de acesso. Para diferentes usuarios do sistema.
+* Adicionei imagens publicas ao projecto e fiz a primeira tentativa de um menu dinamico e recursivo.

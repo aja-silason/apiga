@@ -1,0 +1,15 @@
+create trigger add_preco
+after insert on nomedatabelainserida
+for each row
+
+update tabelaaactualizar
+set nometabela.nomecampo = nometabela.nomecampo - new.outrocampo
+where nometabela.id = new.idoutratabela;
+
+/****************/
+
+create trigger nome
+after insert on xxxxx
+for each row
+update contabilidade
+set contabilidade.valor_bruto = contabilidade.valor_bruto + new.valor_dado

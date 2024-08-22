@@ -1,0 +1,42 @@
+O que você vai fazer:
+
+- Arquitetar sistemas backend Bandit usando as melhores práticas.
+- Implementar e iterar recursos de maneira tática e em ritmo rápido.
+- Trabalhar de forma colaborativa e eficiente em equipes funcionais em um ambiente de inicialização em estágio inicial acelerado.
+- Projetar, estender e implementar APIs.
+- Manter o alto padrão de qualidade de engenharia por meio de revisões de código, testes unitários e análises.
+- Ser responsável pela automação e desenvolvimento de ferramentas.
+- Definir processos de engenharia para lançamentos de produtos.
+
+
+Requisitos
+
+Esperamos que você tenha:
+
+- Experiência em Node.
+- Experiência com bancos de dados SQL e NoSQL.
+- Experiência com Microsserviços e Cloud.
+- Conhecimento avançado de algoritmos.
+- Conhecimento em infraestrutura de TI.
+- Gestão de metodologias ágeis intermediárias.
+- Compreensão das melhores práticas, princípios SOLID, CLEAN Code e soluções escaláveis.
+- Conhecimento em Design Patterns.
+- Experiência em desenvolvimento de aplicativos.
+- Experiência em testes automatizados e pipeline de CI/CD.
+- Experiência com controle de versão.
+- Nível avançado de inglês.
+
+O que oferecemos:
+
+- Excelente remuneração - acima da média do mercado.
+- 100% trabalho remoto.
+- Disponibilizamos hardware necessário para o seu trabalho remoto (home office).
+- Horários flexíveis.
+- Licença paternidade, maternidade, férias e feriados remunerados.
+- Ambiente de trabalho diversificado e multicultural.
+- Um espaço inovador com a estrutura e os recursos de uma multinacional líder.
+- Possibilidade de crescimento profissional rápido, compatível com a sua curva de aprendizagem.
+
+Nosso pessoal trabalha remotamente com uma cultura consistente e robusta que promove a diversidade e o trabalho em equipe. Para continuar sendo a empresa líder em desenvolvimento de software nas Américas, queremos garantir que cada membro da BairesDev tenha as melhores oportunidades de crescimento e desenvolvimento profissional em um ambiente diversificado, acolhedor e inovador. Cada pessoa do time traz algo essencial para a BairesDev!
+
+Queremos ouvir a sua história. Candidate-se agora!

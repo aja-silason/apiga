@@ -1,0 +1,11 @@
+if (servico.Tipo_servico_idTipo_servico = tipo_servico.idTipo_servico) {
+
+valPago = servico.quantidade_servico * tipo_servico.preco;
+
+UPDATE servico SET valor_pago = valPago;
+
+}
+
+
+
+select servico.descricao_servico, servico.quantidade_servico, sum(servico.quantidade_servico * tipo_servico.preco) as valor_a_pagar group by servico.descricao_servico, servico.quantidade_servico;

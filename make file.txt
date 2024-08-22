@@ -1,0 +1,38 @@
+Empresa *
+Funcionários *
+Cargos *
+Usuários *
+Contabilidade*
+Projectos *
+Investimentos*
+Pagamentos Funcionarios*
+Relatorios*
+Clientes *
+Tipo de Serviços *
+Servicos *
+
+Empresa (nome, endereço, contacto, email, descrição);
+
+Funcionários (nome, endereco, contacto, salario, nivel_academico,
+data_contrato);
+
+Cargo: (cargo, pretensao_salarial);
+
+Usuários: (nome_funcionario, nome_de_usuario, senha, imagem_usuario, email);
+
+Contabilidade: (saldo_corrente, saldo_desponivel, lucro, 
+retorno_investimento, fundo, saldo_dispesas);
+
+Projectos: (nome_projecto, orcamento, funcionario_responsavel, nome_cliente, tempo_estimado, tempo_inicio, tempo_termino);
+
+Investimentos: (nome_investimento, proposta, servico_investir, valor_investir);
+
+Pagamentos_Funcionarios: (nome_funcionario, nome_contabilista, salário,mes_pagamento, data_pagamento);
+
+Relatorios: (nome_usuario, relatorio, data_relatorio);
+
+Clientes: (nome, contacto, email);
+
+Tipo_servico: (nome_servico, preco);
+
+Servico: (descricao_servico, quantidade_servico, valor_pago, data_servico

@@ -1,0 +1,13 @@
+Cinza: rgb(242,242,242) / #f2f2f2;
+Castanho claro: rgb(198,156,108) / #c69c6c;
+Castanho escuro: rgb(118,76,36) / #764c24;
+Azul escuro: rgb(3,39,65) / #032741;
+preto: #000;
+branco: #fff;
+
+
+fundo: cinza;
+letras: preto;
+botões: azul escuro;
+cores de letras nos botões: branco;
+letras em destaques titulos: azul escuro;
